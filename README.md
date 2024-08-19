@@ -22,10 +22,10 @@ Prepare four environment variables for your system. This script extracts them vi
 Set variables properly, or change the code if necessary, at your own risk!
 
 ## Example of your environment variables
- BASEURL: https://xxx.contrastsecurity.xxx/Contrast/  
- ORG_ID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX  
- API_KEY: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  
- USERNAME: xxx@xxxx.xxx  
- SERVICE_KEY: XXXXXXXXXXXXXXXX
+ CONTRAST_BASEURL: https://xxx.contrastsecurity.xxx/Contrast/  
+ CONTRAST_ORG_ID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX  
+ CONTRAST_API_KEY: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  
+ CONTRAST_USERNAME: xxx@xxxx.xxx  
+ CONTRAST_SERVICE_KEY: XXXXXXXXXXXXXXXX
  
 

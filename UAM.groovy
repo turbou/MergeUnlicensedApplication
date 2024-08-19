@@ -27,7 +27,7 @@ import java.util.stream.Collectors
                   'Limitation: The script only aims to same language\'s unlicensed child applications, and it excludes already-merged applications.\n' +
                   'Preparation: Prepare four environment variables for your system. This script extracts the environment variables from below parameters.\n\n' +
                   'Set variables properly, or change the code if necessary, at your own risk!\n' +
-                  '  CONTRAST_BASEURL(e.g. https://eval.contrastsecurity.com/Contrast)\n' +
+                  '  CONTRAST_BASEURL(e.g. https://xxx.contrastsecurity.xxx/Contrast)\n' +
                   '  CONTRAST_ORG_ID\n' +
                   '  CONTRAST_API_KEY\n' +
                   '  CONTRAST_USERNAME\n' +
@@ -84,7 +84,9 @@ appsJson.applications.each{app ->
         }
     }
     if (!app.master && app.parentApplicationId == null && !app.archived && app.license.level == 'Unlicensed') {
-        targetChildApps.add([appName: app.name, appId: app.app_id])
+        if (app.app_id == '9bb5b1e3-a56c-4b7e-b31b-e61d597273d2') {
+            targetChildApps.add([appName: app.name, appId: app.app_id])
+        }
     }
 }
 
