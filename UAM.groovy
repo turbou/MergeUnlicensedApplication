@@ -57,7 +57,7 @@ headers.add(new BasicHeader(HttpHeaders.AUTHORIZATION, authHeader))
 
 def clientBuilder = new OkHttpClient.Builder()
 def httpClient = clientBuilder.build()
-def requestBuilder = new Request.Builder().url("${Config.BASEURL}/api/ng/${Config.ORG_ID}/applications/?expand=license").get()
+def requestBuilder = new Request.Builder().url("${Config.BASEURL}/api/ng/${Config.ORG_ID}/applications/?expand=license,skip_links").get()
 for (Header header : headers) {
     requestBuilder.addHeader(header.getName(), header.getValue())
 }
@@ -83,7 +83,7 @@ appsJson.applications.each{app ->
             parentAppName = app.name
         }
     }
-    if (!app.master && !app.archived && app.license.level == 'Unlicensed') {
+    if (!app.master && app.parentApplicationId == null && !app.archived && app.license.level == 'Unlicensed') {
         targetChildApps.add([appName: app.name, appId: app.app_id])
     }
 }
