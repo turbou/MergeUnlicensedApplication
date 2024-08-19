@@ -25,13 +25,13 @@ import java.util.stream.Collectors
     usageHelpAutoWidth = true,
     description = 'Contrast PS UAM(UnlicensedAppMerge) script merges whole unlicensed child applications onto <parent_id> that you set.\n' +
                   'Limitation: The script only aims to same language\'s unlicensed child applications, and it excludes already-merged applications.\n' +
-                  'Preparation: Prepare four environment variables for your system. This script extracts the environment variables via the code below.\n\n' +
+                  'Preparation: Prepare four environment variables for your system. This script extracts the environment variables from below parameters.\n\n' +
                   'Set variables properly, or change the code if necessary, at your own risk!\n' +
-                  '  os.environ["CONTRAST_BASEURL"]\n' +
-                  '  os.environ["CONTRAST_ORG_ID"]\n' +
-                  '  os.environ["CONTRAST_API_KEY"]\n' +
-                  '  os.environ["CONTRAST_USERNAME"]\n' +
-                  '  os.environ["CONTRAST_SERVICE_KEY"]\n'
+                  '  CONTRAST_BASEURL(e.g. https://eval.contrastsecurity.com/Contrast)\n' +
+                  '  CONTRAST_ORG_ID\n' +
+                  '  CONTRAST_API_KEY\n' +
+                  '  CONTRAST_USERNAME\n' +
+                  '  CONTRAST_SERVICE_KEY\n'
 )
 @picocli.groovy.PicocliScript
 
