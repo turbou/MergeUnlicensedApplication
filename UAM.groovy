@@ -84,9 +84,7 @@ appsJson.applications.each{app ->
         }
     }
     if (!app.master && app.parentApplicationId == null && !app.archived && app.license.level == 'Unlicensed') {
-        if (app.app_id == '9bb5b1e3-a56c-4b7e-b31b-e61d597273d2') {
-            targetChildApps.add([appName: app.name, appId: app.app_id])
-        }
+        targetChildApps.add([appName: app.name, appId: app.app_id])
     }
 }
 
