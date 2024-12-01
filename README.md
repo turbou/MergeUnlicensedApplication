@@ -6,9 +6,12 @@
 
 ## Usage
 ```bash
-groovy UAM.groovy XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+groovy UAM.groovy -p XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX -t BOS
 ```
 (XXXX stands for your application's <parent_id>)
+- `-c, --confirm` Display a confirmation prompt before proceeding with the merge.
+- `-p, --parent` Parent Appication ID(XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX)
+- `-t, --tag` Filter child applications to be merged by tag.
 
 ## Description
 Contrast PS UAM(UnlicensedAppMerge) script merges whole unlicensed child applications onto <parent_id> that you set.
@@ -23,9 +26,6 @@ Set variables properly, or change the code if necessary, at your own risk!
 
 ## Example of your environment variables
  CONTRAST_BASEURL: https://xxx.contrastsecurity.xxx/Contrast/  
- CONTRAST_ORG_ID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX  
+ CONTRAST_AUTHORIZATION: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX==  
  CONTRAST_API_KEY: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  
- CONTRAST_USERNAME: xxx@xxxx.xxx  
- CONTRAST_SERVICE_KEY: XXXXXXXXXXXXXXXX
- 
-
+ CONTRAST_ORG_ID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX  
